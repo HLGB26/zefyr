@@ -43,7 +43,7 @@ class ZefyrScaffoldState extends State<ZefyrScaffold> {
       scaffold: this,
       child: Column(
         children: <Widget>[
-          Expanded(child: widget.child),
+          widget.child,
           toolbar,
         ],
       ),
