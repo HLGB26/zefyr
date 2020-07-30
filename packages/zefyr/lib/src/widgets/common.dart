@@ -90,12 +90,12 @@ class _ZefyrLineState extends State<ZefyrLine> {
   }
 
   void ensureVisible(BuildContext context, ZefyrScope scope) {
-    if (scope.selection.isCollapsed &&
-        widget.node.containsOffset(scope.selection.extentOffset)) {
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        bringIntoView(context);
-      });
-    }
+//     if (scope.selection.isCollapsed &&
+//         widget.node.containsOffset(scope.selection.extentOffset)) {
+//       WidgetsBinding.instance.addPostFrameCallback((_) {
+//         bringIntoView(context);
+//       });
+//     }
   }
 
   void bringIntoView(BuildContext context) {
