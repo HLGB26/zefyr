@@ -147,7 +147,9 @@ class _ZefyrEditableTextState extends State<ZefyrEditableText>
     _focusAttachment.reparent();
     super.build(context); // See AutomaticKeepAliveState.
 
-    Widget body = Column(mainAxisAlignment:MainAxisAlignment.start,children: _buildChildren(context));
+    Widget body = Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: _buildChildren(context));
     if (widget.padding != null) {
       body = Padding(padding: widget.padding, child: body);
     }
@@ -164,7 +166,7 @@ class _ZefyrEditableTextState extends State<ZefyrEditableText>
       controls: widget.selectionControls ?? defaultSelectionControls(context),
     ));
 
-    return Stack( children: layers);
+    return Stack(children: layers);
   }
 
   @override
