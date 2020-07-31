@@ -183,7 +183,7 @@ class _ZefyrSelectionOverlayState extends State<ZefyrSelectionOverlay>
         ],
       ),
     );
-    return Container(child: overlay);
+    return Flexible(child: Container(child: overlay));
   }
 
   //
