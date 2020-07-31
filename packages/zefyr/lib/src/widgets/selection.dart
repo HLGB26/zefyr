@@ -169,21 +169,23 @@ class _ZefyrSelectionOverlayState extends State<ZefyrSelectionOverlay>
       onTap: _handleTap,
       onTapCancel: _handleTapCancel,
       onLongPress: _handleLongPress,
-      child: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          SelectionHandleDriver(
-            position: _SelectionHandlePosition.base,
-            selectionOverlay: this,
-          ),
-          SelectionHandleDriver(
-            position: _SelectionHandlePosition.extent,
-            selectionOverlay: this,
-          ),
-        ],
+      child: Flexible(
+        child: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            SelectionHandleDriver(
+              position: _SelectionHandlePosition.base,
+              selectionOverlay: this,
+            ),
+            SelectionHandleDriver(
+              position: _SelectionHandlePosition.extent,
+              selectionOverlay: this,
+            ),
+          ],
+        ),
       ),
     );
-    return Flexible(child: Container(child: overlay));
+    return Container(child: overlay);
   }
 
   //
