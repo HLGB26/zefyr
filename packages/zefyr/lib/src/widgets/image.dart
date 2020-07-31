@@ -5,6 +5,7 @@ import 'dart:async';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
 
+import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
@@ -64,9 +65,48 @@ class _ZefyrImageState extends State<ZefyrImage> {
     return _EditableImage(
       child: Padding(
         padding: theme.defaultLineTheme.padding,
-        child: image,
+        child: GestureDetector(
+            onTap: () {
+              displayFullPost(context, image: image);
+            },
+            child: image),
       ),
       node: widget.node,
+    );
+  }
+}
+
+displayFullPost(context, {image}) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => PostScreenPage(
+        post: image,
+      ),
+    ),
+  );
+}
+
+class PostScreenPage extends StatelessWidget {
+  //to show post in grid view when user clicked on it
+  final post;
+
+  PostScreenPage({this.post});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Scaffold(
+//            appBar:
+//                header(context, isAppTitle: false, strTitle: post.description),
+        body: ListView(
+          children: <Widget>[
+            Container(
+              child: post,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
