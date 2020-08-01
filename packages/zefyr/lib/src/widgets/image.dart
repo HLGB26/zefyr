@@ -10,7 +10,6 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
 import 'package:notus/notus.dart';
-import 'package:photo_view/photo_view.dart';
 
 import '../../zefyr.dart';
 import 'editable_box.dart';
@@ -106,9 +105,9 @@ class PostScreenPage extends StatelessWidget {
         body: Center(
           child: ListView(
             children: <Widget>[
-              Container(
-                child: PhotoView(
-                  imageProvider: AssetImage(post),
+              Center(
+                child: Container(
+                  child: post,
                 ),
               ),
             ],
