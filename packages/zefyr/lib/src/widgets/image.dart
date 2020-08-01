@@ -66,6 +66,7 @@ class _ZefyrImageState extends State<ZefyrImage> {
       child: Padding(
         padding: theme.defaultLineTheme.padding,
         child: GestureDetector(
+            //my function
             onTap: () {
               displayFullPost(context, image: image);
             },
@@ -76,7 +77,8 @@ class _ZefyrImageState extends State<ZefyrImage> {
   }
 }
 
-displayFullPost(context, {image}) {
+void displayFullPost(context, {image}) {
+  //my fuctionn
   Navigator.push(
     context,
     MaterialPageRoute(
@@ -88,6 +90,7 @@ displayFullPost(context, {image}) {
 }
 
 class PostScreenPage extends StatelessWidget {
+  // my class
   //to show post in grid view when user clicked on it
   final post;
 
@@ -101,8 +104,10 @@ class PostScreenPage extends StatelessWidget {
 //                header(context, isAppTitle: false, strTitle: post.description),
         body: ListView(
           children: <Widget>[
-            Container(
-              child: post,
+            Center(
+              child: Container(
+                child: post,
+              ),
             ),
           ],
         ),
