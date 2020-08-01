@@ -17,6 +17,7 @@ dependencies:
   meta: ^1.1.0
   quiver_hashcode: ^2.0.0
   clipboard_manager: ^0.0.4
+  photo_view: ^0.9.2
 
 dev_dependencies:
   flutter_test:
