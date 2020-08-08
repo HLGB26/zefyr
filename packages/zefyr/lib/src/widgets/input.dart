@@ -184,7 +184,7 @@ class InputConnectionController implements TextInputClient {
 
   @override
   TextEditingValue get currentTextEditingValue => TextEditingValue.empty;
-
+    
   @override
   // TODO: implement currentAutofillScope
   AutofillScope get currentAutofillScope => throw UnimplementedError();
