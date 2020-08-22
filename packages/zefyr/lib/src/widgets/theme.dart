@@ -377,10 +377,10 @@ class AttributeTheme {
       ),
       heading3: LineTheme(
         textStyle: defaultLineTheme.textStyle.copyWith(
-          fontSize: 20.0,
+          fontSize: 10.0,
           color: defaultLineTheme.textStyle.color.withOpacity(0.7),
           height: 1.15,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.normal,
         ),
         padding: EdgeInsets.only(top: 8.0),
       ),
