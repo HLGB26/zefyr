@@ -70,7 +70,7 @@ class ZefyrThemeData {
     final ThemeData themeData = Theme.of(context);
     final defaultStyle = DefaultTextStyle.of(context);
     final paragraphStyle = defaultStyle.style.copyWith(
-      fontSize: 10.0,
+      fontSize: 2.0,
       height: 1.3,
     );
     const padding = EdgeInsets.symmetric(vertical: 8.0);
