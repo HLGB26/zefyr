@@ -251,7 +251,7 @@ class BlockTheme {
         textStyle: TextStyle(
           color: defaultTextStyle.style.color.withOpacity(0.8),
           fontFamily: fontFamily,
-          fontSize: 10.0,
+          fontSize: 2.0,
           height: 1.25,
         ),
         padding: padding,
