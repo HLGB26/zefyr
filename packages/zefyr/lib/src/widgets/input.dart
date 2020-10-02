@@ -16,6 +16,8 @@ class InputConnectionController implements TextInputClient {
   //
   // public members
   //
+  @override
+  dynamic noSuchMethod(Invocation i) => super.noSuchMethod(i);
 
   final RemoteValueChanged onValueChanged;
 
@@ -184,7 +186,7 @@ class InputConnectionController implements TextInputClient {
 
   @override
   TextEditingValue get currentTextEditingValue => TextEditingValue.empty;
-    
+
   @override
   // TODO: implement currentAutofillScope
   AutofillScope get currentAutofillScope => throw UnimplementedError();
