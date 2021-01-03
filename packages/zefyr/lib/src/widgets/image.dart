@@ -65,12 +65,13 @@ class _ZefyrImageState extends State<ZefyrImage> {
     return _EditableImage(
       child: Padding(
         padding: theme.defaultLineTheme.padding,
-        child: GestureDetector(
-            //my function
-            onTap: () {
-              displayFullPost(context, image: image);
-            },
-            child: image),
+        child: image,
+//         GestureDetector(
+//             //my function
+//             onTap: () {
+//               displayFullPost(context, image: image);
+//             },
+//             child: image),
       ),
       node: widget.node,
     );
